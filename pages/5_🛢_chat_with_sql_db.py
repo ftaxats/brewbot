@@ -9,7 +9,7 @@ from langchain_community.agent_toolkits import create_sql_agent
 from langchain_community.callbacks import StreamlitCallbackHandler
 from langchain_community.utilities.sql_database import SQLDatabase
 
-st.set_page_config(page_title="ChatSQL", page_icon="🛢")
+st.set_page_config(page_title="Brewbot", page_icon="🛢")
 st.header('BrewThat')
 st.write('Enable the Brewbot to interact with your company data through simple, conversations.')
 
