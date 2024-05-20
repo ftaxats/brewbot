@@ -23,7 +23,7 @@ class SqlChatbot:
         if db_uri == 'USE_SAMPLE_DB':
             db_filepath = (Path(__file__).parent.parent / "assets/Chinook.db").absolute()
             db_uri = f"sqlite:////{db_filepath}"
-            creator = lambda: sqlite3.connect(f"file:{db_filepath}?mode=ro", uri=True)
+            creator = lambda: sqlite3.connect(f"file:{db_filepath}?mode=rw", uri=True)
             db = SQLDatabase(create_engine("sqlite:///", creator=creator))
         else:
             db = SQLDatabase.from_uri(database_uri=db_uri)
